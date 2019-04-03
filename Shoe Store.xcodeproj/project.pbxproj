@@ -12,6 +12,10 @@
 		59B00B0E2254BFF8003B3DC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59B00B0C2254BFF8003B3DC5 /* Main.storyboard */; };
 		59B00B102254BFFB003B3DC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59B00B0F2254BFFB003B3DC5 /* Assets.xcassets */; };
 		59B00B132254BFFB003B3DC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59B00B112254BFFB003B3DC5 /* LaunchScreen.storyboard */; };
+		59B00B1C2254D862003B3DC5 /* PoetsenOne-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 59B00B1B2254D862003B3DC5 /* PoetsenOne-Regular.otf */; };
+		59B00B202254E374003B3DC5 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B00B1F2254E374003B3DC5 /* CategoryTableViewCell.swift */; };
+		59B00B222254FBBA003B3DC5 /* Shoe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B00B212254FBBA003B3DC5 /* Shoe.swift */; };
+		59B00B24225536B3003B3DC5 /* ShoeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B00B23225536B3003B3DC5 /* ShoeCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		59B00B0F2254BFFB003B3DC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59B00B122254BFFB003B3DC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		59B00B142254BFFB003B3DC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59B00B1B2254D862003B3DC5 /* PoetsenOne-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoetsenOne-Regular.otf"; sourceTree = "<group>"; };
+		59B00B1F2254E374003B3DC5 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		59B00B212254FBBA003B3DC5 /* Shoe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shoe.swift; sourceTree = "<group>"; };
+		59B00B23225536B3003B3DC5 /* ShoeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,26 @@
 		59B00B072254BFF8003B3DC5 /* Shoe Store */ = {
 			isa = PBXGroup;
 			children = (
+				59B00B1A2254D849003B3DC5 /* fonts */,
 				59B00B082254BFF8003B3DC5 /* AppDelegate.swift */,
 				59B00B0A2254BFF8003B3DC5 /* ViewController.swift */,
 				59B00B0C2254BFF8003B3DC5 /* Main.storyboard */,
 				59B00B0F2254BFFB003B3DC5 /* Assets.xcassets */,
 				59B00B112254BFFB003B3DC5 /* LaunchScreen.storyboard */,
 				59B00B142254BFFB003B3DC5 /* Info.plist */,
+				59B00B1F2254E374003B3DC5 /* CategoryTableViewCell.swift */,
+				59B00B212254FBBA003B3DC5 /* Shoe.swift */,
+				59B00B23225536B3003B3DC5 /* ShoeCollectionViewCell.swift */,
 			);
 			path = "Shoe Store";
+			sourceTree = "<group>";
+		};
+		59B00B1A2254D849003B3DC5 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				59B00B1B2254D862003B3DC5 /* PoetsenOne-Regular.otf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +142,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59B00B1C2254D862003B3DC5 /* PoetsenOne-Regular.otf in Resources */,
 				59B00B132254BFFB003B3DC5 /* LaunchScreen.storyboard in Resources */,
 				59B00B102254BFFB003B3DC5 /* Assets.xcassets in Resources */,
 				59B00B0E2254BFF8003B3DC5 /* Main.storyboard in Resources */,
@@ -135,8 +156,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59B00B24225536B3003B3DC5 /* ShoeCollectionViewCell.swift in Sources */,
+				59B00B222254FBBA003B3DC5 /* Shoe.swift in Sources */,
 				59B00B0B2254BFF8003B3DC5 /* ViewController.swift in Sources */,
 				59B00B092254BFF8003B3DC5 /* AppDelegate.swift in Sources */,
+				59B00B202254E374003B3DC5 /* CategoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
