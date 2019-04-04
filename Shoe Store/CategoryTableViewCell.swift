@@ -10,21 +10,40 @@ import UIKit
 
 class CategoryTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    //MARK: Properties
     
     @IBOutlet var shoeCollection: UICollectionView!
     @IBOutlet var categoryButton: UIButton!
     @IBOutlet var categoryItemCountLabel: UILabel!
     
-    var categoryName: String = ""
+    var categoryName: String?
     var categoryItems: [Shoe] = []
     
-    let colorDict = [
-        "black": UIColor.black,
-        "red": UIColor.red,
-        "orange": UIColor.orange,
-        "yellow": UIColor.yellow,
-        "green": UIColor.green,
-    ]
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        // set delegate and datesource for shoe collection view
+        self.shoeCollection.delegate = self
+        self.shoeCollection.dataSource = self
+    }
+    
+    //MARK: UICollectionViewDelegate
+    
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        UICollectionViewCell.animate(withDuration: 0.2, animations: {
+            cell?.contentView.transform = CGAffineTransform(scaleX: 0.96, y: 0.94)
+        })
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        UICollectionViewCell.animate(withDuration: 0.2, animations: {
+            cell?.contentView.transform = .identity
+        })
+    }
+    
+    //MARK: UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categoryItems.count
@@ -38,10 +57,11 @@ class CategoryTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollec
         cell.priceLabel.text = "$"+"\(String(shoe.price))"
         cell.shoeTitleLabel.text = shoe.title
         
+        // remove old color options and add new ones
         cell.colorOptionsStackView.subviews.forEach({ $0.removeFromSuperview() })
         for colorOption in shoe.colorOptions {
             let colorView = UIView()
-            colorView.backgroundColor = colorDict[colorOption]
+            colorView.backgroundColor = Constants.colorDict[colorOption]
             colorView.heightAnchor.constraint(equalToConstant: 12).isActive = true
             colorView.widthAnchor.constraint(equalToConstant: 12).isActive = true
             colorView.layer.cornerRadius = 4
@@ -49,22 +69,12 @@ class CategoryTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollec
         }
         
         // set cell backgroud for card-like appearance
-        cell.contentView.layer.masksToBounds = true
-        cell.layer.masksToBounds = false
-        
-        cell.contentView.layer.cornerRadius = 20
-        cell.contentView.layer.borderWidth = 1.0
-        cell.contentView.layer.borderColor = UIColor.clear.cgColor
-        cell.contentView.backgroundColor = UIColor.white
-        
-        cell.layer.shadowRadius = 8.0
-        cell.layer.shadowOpacity = 0.2
-        cell.layer.shadowColor = UIColor.gray.cgColor
-        cell.layer.shadowOffset = CGSize(width: 0, height: 2.0)
-        cell.layer.shadowPath = UIBezierPath(roundedRect:cell.bounds, cornerRadius:cell.contentView.layer.cornerRadius).cgPath
+        cell.addCardAppearence()
         
         return cell
     }
+    
+    //MARK: UICollectionViewDelegateFlowLayout
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
@@ -82,15 +92,5 @@ class CategoryTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollec
         return sectionInset
     }
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        self.shoeCollection.delegate = self
-        self.shoeCollection.dataSource = self
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-
 }
+

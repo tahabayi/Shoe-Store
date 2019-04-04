@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    //MARK: Properties
+    
     @IBOutlet var tableView: UITableView!
     
     let categories = [
@@ -24,6 +26,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             ]
         ],
     ]
+    
+    //MARK: UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categories.count
@@ -44,12 +48,5 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-
-
 }
 

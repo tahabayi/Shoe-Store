@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		592ABF222256189A00CDAEB1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592ABF212256189A00CDAEB1 /* Constants.swift */; };
+		592ABF242256218000CDAEB1 /* HighlightedUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592ABF232256218000CDAEB1 /* HighlightedUIButton.swift */; };
 		59B00B092254BFF8003B3DC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B00B082254BFF8003B3DC5 /* AppDelegate.swift */; };
 		59B00B0B2254BFF8003B3DC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B00B0A2254BFF8003B3DC5 /* ViewController.swift */; };
 		59B00B0E2254BFF8003B3DC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59B00B0C2254BFF8003B3DC5 /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		592ABF212256189A00CDAEB1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		592ABF232256218000CDAEB1 /* HighlightedUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightedUIButton.swift; sourceTree = "<group>"; };
 		59B00B052254BFF8003B3DC5 /* Shoe Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shoe Store.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59B00B082254BFF8003B3DC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59B00B0A2254BFF8003B3DC5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 				59B00B1F2254E374003B3DC5 /* CategoryTableViewCell.swift */,
 				59B00B212254FBBA003B3DC5 /* Shoe.swift */,
 				59B00B23225536B3003B3DC5 /* ShoeCollectionViewCell.swift */,
+				592ABF212256189A00CDAEB1 /* Constants.swift */,
+				592ABF232256218000CDAEB1 /* HighlightedUIButton.swift */,
 			);
 			path = "Shoe Store";
 			sourceTree = "<group>";
@@ -157,7 +163,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				59B00B24225536B3003B3DC5 /* ShoeCollectionViewCell.swift in Sources */,
+				592ABF222256189A00CDAEB1 /* Constants.swift in Sources */,
 				59B00B222254FBBA003B3DC5 /* Shoe.swift in Sources */,
+				592ABF242256218000CDAEB1 /* HighlightedUIButton.swift in Sources */,
 				59B00B0B2254BFF8003B3DC5 /* ViewController.swift in Sources */,
 				59B00B092254BFF8003B3DC5 /* AppDelegate.swift in Sources */,
 				59B00B202254E374003B3DC5 /* CategoryTableViewCell.swift in Sources */,

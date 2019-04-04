@@ -147,7 +147,7 @@
                                                                                                     </view>
                                                                                                 </subviews>
                                                                                             </stackView>
-                                                                                            <button opaque="NO" contentMode="scaleAspectFit" verticalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2h-BO-u8a">
+                                                                                            <button opaque="NO" contentMode="scaleAspectFit" verticalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2h-BO-u8a" customClass="HighlightedUIButton" customModule="Shoe_Store" customModuleProvider="target">
                                                                                                 <rect key="frame" x="164" y="180" width="24" height="24"/>
                                                                                                 <constraints>
                                                                                                     <constraint firstAttribute="width" constant="24" id="EP2-jq-1u4"/>
